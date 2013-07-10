@@ -2,3 +2,22 @@
   Where's Edward?
 
 = image_tag 'edward.jpg'
+
+%table
+  %thead
+    %tr
+      %th Sighting ID
+      %th Location
+      %th Latitude
+      %th Longitude
+  %tbody
+    - @sightings.each do |s|
+      %tr
+        %td 
+          = link_to s.id, s
+        %td 
+          = link_to s.location, s
+        %td 
+          #{s.latitude}
+        %td 
+          #{s.longitude}

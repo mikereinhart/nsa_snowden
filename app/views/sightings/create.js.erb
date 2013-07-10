@@ -1,0 +1,3 @@
+console.log('Sighting new!');
+var img = $('<img>').attr('src','<%= "#{@sighting.image}".html_safe %>');
+$('body').append(img)

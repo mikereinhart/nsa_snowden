@@ -3,13 +3,15 @@ development:
   encoding: unicode
   database: nsa_snowden_development
   pool: 5
-  username: dylanoshea
+  username: michaelreinhart
   password:
+  host: localhost
 
 test:
   adapter: postgresql
   encoding: unicode
   database: nsa_snowden_test
   pool: 5
-  username: dylanoshea
+  username: michaelreinhart
   password:
+  host: localhost

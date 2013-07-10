@@ -1,0 +1,13 @@
+%h1 Sighting No. #{@sighting.id}
+
+= image_tag @sighting.image
+= image_tag @sighting.image.large
+= image_tag @sighting.image.medium
+= image_tag @sighting.image.thumb
+
+
+#map-canvas
+
+:javascript
+  snowden_map.display_map(#{@sighting.latitude}, #{@sighting.longitude});
+  snowden_map.add_marker(#{@sighting.latitude}, #{@sighting.longitude}, "#{@sighting.location}");

@@ -1,0 +1,10 @@
+= form_for sighting, html: {multipart: true}, remote: true do |f|
+  / the added new stuff means there will be file uploads involved in the form
+  = f.label :image
+  = image_tag(sighting.image) if !sighting.image.blank?
+  = f.file_field :image
+  = text_field_tag 'sighting[remote_image_url]', nil, placeholder: 'Enter a web image URL'
+  / there is no remote image url attribute of Sighting, so we cant use 'f.' here
+  = f.label :location
+  = f.text_field :location
+  = f.submit
